@@ -6,7 +6,7 @@ import { siteMetadata } from "@/constants/site-metadata";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 w-full px-10 bg-background">
+    <header className="sticky top-0 w-full px-10 z-1 bg-background">
       <div className="w-full flex h-20 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-4">
