@@ -12,16 +12,16 @@ export default function Content(props: ContentProps) {
       className="w-full h-screen flex items-center justify-center"
     >
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">
-              <h2 className="text-4xl leading-tight font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl ">
+              <h2 className="text-4xl leading-tight font-bold tracking-tighter sm:text-5xl md:text-5xl lg:text-5xl ">
                 {props.title}
               </h2>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden border shadow-xl">
+            <div className="relative w-full h-[500px] md:h-[500px] lg:h-[500px] rounded-lg overflow-hidden border shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-500 opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-5/6 h-4/5 bg-background rounded-lg shadow-lg p-4 overflow-hidden">
