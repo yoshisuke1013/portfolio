@@ -1,9 +1,34 @@
-import { ModeToggle } from "@/components/ModeToggle";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <ModeToggle />
-    </div>
+    <>
+      <Header />
+      <main>
+        <section
+          id="top"
+          className="w-full h-screen flex items-center justify-center"
+        >
+          <h2>Top</h2>
+          <p>テキストが入ります。</p>
+        </section>
+        <section
+          id="about"
+          className="w-full h-screen flex items-center justify-center"
+        >
+          <h2>About</h2>
+          <p>テキストが入ります。</p>
+        </section>
+        <section
+          id="skill"
+          className="w-full h-screen flex items-center justify-center"
+        >
+          <h2>Skill</h2>
+          <p>テキストが入ります。</p>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
