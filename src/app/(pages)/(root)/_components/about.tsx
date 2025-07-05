@@ -1,10 +1,9 @@
 import { Terminal } from "lucide-react";
-import { siteMetadata } from "@/constants/site-metadata";
 
-export default function Top() {
+export default function About() {
   return (
     <section
-      id="top"
+      id="about"
       className="w-full h-screen flex items-center justify-center"
     >
       <div className="container px-4 md:px-6">
@@ -12,7 +11,7 @@ export default function Top() {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">
               <h2 className="text-4xl leading-tight font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl ">
-                {siteMetadata.SITE_NAME}
+                About
               </h2>
             </div>
           </div>
@@ -36,15 +35,16 @@ export default function Top() {
                     </div>
                     <div className="flex-1 overflow-hidden font-mono text- p-2">
                       <pre className="text-primary py-4">
-                        <code className="whitespace-pre-wrap">{`# Clone the repository
-git clone ${siteMetadata.SITE_REPOSITORY}
+                        <code className="whitespace-pre-wrap">{`# Occupation(職種)
+Front-End Developer(フロントエンドエンジニア)
 
-# Install dependencies
-cd portfolio
-npm install
+# Career Start(エンジニア歴)
+It started in 2010.(2010年〜)
 
-# Start your development journey
-npm run dev`}</code>
+# Work History(職歴)
+Web Application Development(Webアプリケーション開発)
+Website Creation(Webサイト開発)
+`}</code>
                       </pre>
                     </div>
                   </div>

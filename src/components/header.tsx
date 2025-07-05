@@ -16,7 +16,7 @@ export default function Header() {
             </h1>
           </Link>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <Button asChild variant="link" size="lg" className="flex text-lg">
             <Link href="#top">Top</Link>
           </Button>
