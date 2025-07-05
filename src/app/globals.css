@@ -125,10 +125,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  scroll-margin-top: 5rem;
-}
-
 .skill {
   display: flex;
   align-items: center;

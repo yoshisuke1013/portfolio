@@ -8,7 +8,7 @@ type ContentProps = {
 export default function Content(props: ContentProps) {
   return (
     <section
-      id="about"
+      id={props.title}
       className="w-full h-screen flex items-center justify-center"
     >
       <div className="container px-4 md:px-6">

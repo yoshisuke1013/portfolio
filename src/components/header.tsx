@@ -17,13 +17,13 @@ export default function Header() {
         </div>
         <div className="hidden md:flex items-center gap-4">
           <Button asChild variant="link" size="lg" className="flex text-lg">
-            <Link href="#top">Top</Link>
+            <Link href="#Top">Top</Link>
           </Button>
           <Button asChild variant="link" size="lg" className="flex text-lg">
-            <Link href="#about">About</Link>
+            <Link href="#About">About</Link>
           </Button>
           <Button asChild variant="link" size="lg" className="flex text-lg">
-            <Link href="#skill">Skill</Link>
+            <Link href="#Skill">Skill</Link>
           </Button>
           <Button asChild variant="link" size="lg" className="flex text-lg">
             <Link
