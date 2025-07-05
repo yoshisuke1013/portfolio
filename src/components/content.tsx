@@ -21,7 +21,7 @@ export default function Content(props: ContentProps) {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative w-full h-[500px] md:h-[500px] lg:h-[500px] rounded-lg overflow-hidden border shadow-xl">
+            <div className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden border shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-500 opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-5/6 h-4/5 bg-background rounded-lg shadow-lg p-4 overflow-hidden">
@@ -40,9 +40,10 @@ export default function Content(props: ContentProps) {
                     </div>
                     <div className="flex-1 overflow-hidden font-mono text- p-2">
                       <pre className="text-primary py-4">
-                        <code className="whitespace-pre-wrap">
-                          {props.content}
-                        </code>
+                        <code
+                          className="whitespace-pre-wrap"
+                          dangerouslySetInnerHTML={{ __html: props.content }}
+                        />
                       </pre>
                     </div>
                   </div>

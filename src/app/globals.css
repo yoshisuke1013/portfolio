@@ -128,3 +128,15 @@ html {
 section {
   scroll-margin-top: 5rem;
 }
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 1em;
+}
+
+.icon {
+  display: inline-flex;
+  width: 36px;
+}
