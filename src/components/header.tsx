@@ -26,6 +26,9 @@ export default function Header() {
             <Link href="#Skill">Skill</Link>
           </Button>
           <Button asChild variant="link" size="lg" className="flex text-lg">
+            <Link href="#Contact">Contact</Link>
+          </Button>
+          <Button asChild variant="link" size="lg" className="flex text-lg">
             <Link
               href={siteMetadata.SOCIAL_MEDIA.github}
               target="_blank"
