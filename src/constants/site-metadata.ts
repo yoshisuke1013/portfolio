@@ -40,7 +40,7 @@ Website Creation(Webサイト開発)
 const siteSkillContent = `# Programming Language(言語)
 <p class="skill"><i class="icon">${Icons.html}</i><i class="icon">${Icons.css}</i><i class="icon">${Icons.sass}</i><i class="icon">${Icons.javaScript}</i><i class="icon">${Icons.typeScript}</i></p>
 # Library(ライブラリ)
-<p class="skill"><i class="icon">${Icons.react}</i><i class="icon">${Icons.vuejs}</i><i class="icon">${Icons.jquery}</i></p>
+<p class="skill"><i class="icon">${Icons.react}</i><i class="icon">${Icons.vuejs}</i><i class="icon">${Icons.jquery}</i><i class="icon">${Icons.tailwindCSS}</i></p>
 # Framework(フレームワーク)
 <p class="skill"><i class="icon">${Icons.nextjs}</i><i class="icon">${Icons.nuxtjs}</i><i class="icon">${Icons.astro}</i></p>
 # CMS(コンテントマネジメントシステム)
