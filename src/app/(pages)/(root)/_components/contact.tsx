@@ -9,6 +9,7 @@ import FormMessage from "@/components/form-message";
 import { cn } from "@/lib/utils";
 import Content from "@/components/content";
 import type { FormStatus } from "@/types/index";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<FormStatus>({
@@ -33,37 +34,36 @@ export default function Contact() {
   const onSubmit = async (data: ContactValues) => {
     setFormStatus({ state: "submitting", message: "" });
 
-    console.log("フォームデータ:", data);
+    const emailjsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+    const emailjsTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+    const emailjsPublicId = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID!;
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setFormStatus({
-          state: "success",
-          message: "お問い合わせを受け付けました。",
-        });
-        reset();
-      } else {
-        console.error("送信エラー:", result);
-        setFormStatus({
-          state: "error",
-          message: "エラーが発生しました。お手数ですが、再度お試しください。",
-        });
-      }
+      emailjs
+        .send(emailjsServiceId, emailjsTemplateId, data, {
+          publicKey: emailjsPublicId,
+        })
+        .then(
+          () => {
+            setFormStatus({
+              state: "success",
+              message: "お問い合わせを受け付けました。",
+            });
+            reset();
+          },
+          (err) => {
+            console.error("例外エラー:", err);
+            setFormStatus({
+              state: "error",
+              message: `エラーが発生しました。お手数ですが、再度お試しください。`,
+            });
+          }
+        );
     } catch (err) {
       console.error("例外エラー:", err);
       setFormStatus({
         state: "error",
-        message: "エラーが発生しました。お手数ですが、再度お試しください。",
+        message: `エラーが発生しました。お手数ですが、再度お試しください。`,
       });
     }
   };
