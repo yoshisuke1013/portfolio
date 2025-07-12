@@ -1,4 +1,5 @@
 import { Terminal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type ContentProps = {
   title: string;
@@ -22,7 +23,14 @@ export default function Content(props: ContentProps) {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden border shadow-xl">
+            <div
+              className={cn(
+                "relative w-full rounded-lg overflow-hidden border shadow-xl",
+                props.title === "Contact"
+                  ? "min-h-[700px] md:min-h-[700px] lg:min-h-[700px]"
+                  : "min-h-[600px] md:min-h-[600px] lg:min-h-[600px]"
+              )}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-500 opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-5/6 h-4/5 bg-background rounded-lg shadow-lg p-4 overflow-hidden">
