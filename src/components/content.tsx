@@ -22,7 +22,7 @@ export default function Content(props: ContentProps) {
               className={cn(
                 "relative w-full rounded-lg overflow-hidden border shadow-xl",
                 props.title === "Contact"
-                  ? "min-h-[700px] md:min-h-[700px] lg:min-h-[700px]"
+                  ? "min-h-[760px] md:min-h-[760px] lg:min-h-[760px]"
                   : "min-h-[600px] md:min-h-[600px] lg:min-h-[600px]"
               )}
             >
