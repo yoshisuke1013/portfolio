@@ -1,11 +1,6 @@
 import { Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-type ContentProps = {
-  title: string;
-  content?: string;
-  children?: React.ReactNode;
-};
+import type { ContentProps } from "@/types/index";
 
 export default function Content(props: ContentProps) {
   return (
