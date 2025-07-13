@@ -1,6 +1,7 @@
 import { Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ContentProps } from "@/types/index";
+import Code from "./code";
 
 export default function Content(props: ContentProps) {
   return (
@@ -43,15 +44,10 @@ export default function Content(props: ContentProps) {
                       </div>
                     </div>
                     <div className="flex-1 overflow-hidden font-mono text- p-2">
-                      {props.content ? (
-                        <pre className="text-primary py-4">
-                          <code
-                            className="whitespace-pre-wrap"
-                            dangerouslySetInnerHTML={{ __html: props.content }}
-                          />
-                        </pre>
-                      ) : (
+                      {props.title === "Contact" ? (
                         props.children
+                      ) : (
+                        <Code>{props.children}</Code>
                       )}
                     </div>
                   </div>

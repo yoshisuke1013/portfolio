@@ -1,7 +1,10 @@
 export type ContentProps = {
   title: string;
-  content?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
+};
+
+export type CodeProps = {
+  children: React.ReactNode;
 };
 
 export type FormStatus = {
